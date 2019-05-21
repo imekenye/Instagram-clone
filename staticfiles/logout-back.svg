@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280px" height="800px" viewBox="0 0 1280 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>logout</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1280" height="800" rx="2"></rect>
+        <filter x="-2.4%" y="-2.9%" width="104.8%" height="107.8%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="9" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="logout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#F1F5F8" x="0" y="0" width="1280" height="800"></rect>
+        <g id="profile-card">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+        </g>
+        <path d="M-23.66616,251.093989 C91.9921314,278 241.655422,289.326191 259.031166,128 C270.614996,20.4492058 422.613053,-41.5507942 715.025337,-58 L-40.3827697,-58 L-40.3827697,262.074587 C-106.343891,236.816848 -100.771688,233.156648 -23.66616,251.093989 Z" id="Path-2-Copy" fill="#CE2E8C" fill-rule="nonzero"></path>
+        <path d="M668.222425,837.422703 C783.880717,864.328714 933.544007,875.654905 950.919751,714.328714 C962.503581,606.77792 1114.50164,544.77792 1406.91392,528.328714 L651.505815,528.328714 L651.505815,848.403301 C585.544694,823.145561 591.116897,819.485362 668.222425,837.422703 Z" id="Path-2-Copy-3" fill="#CE2E8C" fill-rule="nonzero" transform="translate(1006.401253, 690.828157) rotate(-177.000000) translate(-1006.401253, -690.828157) "></path>
+    </g>
+</svg>
