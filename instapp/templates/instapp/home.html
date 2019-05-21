@@ -1,10 +1,474 @@
+{% load  static %}
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    Home!
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Instaclone</title>
+  </head>
+  <body class="feed" style="background-color: #F1F5F8">
+    {% include 'navbar.html' %}
+
+    <main>
+      <div class="container">
+        <div class="row main" style="margin-top: 10%">
+            {% if user.is_authenticated %}
+          <div class="col-md-4 col-sm-12 d-flex flex-column mx-auto position-sticky">
+            <div class="card hovercard">
+              <div class="cardheader"></div>
+              <div class="avatar">
+                <img alt="" src="http://lorempixel.com/100/100/people/9/" />
+              </div>
+              <div class="info">
+                <div class="title">
+                  <h2
+                    style="font-family: OpenSans-Regular;
+font-size: 20px;
+color: #231F20;
+text-align: center; margin-bottom:0;"
+                  >
+                    Isaiah Mekenye
+                  </h2>
+                  <p
+                    style="opacity: 0.7;
+font-family: OpenSans-Regular;
+font-size: 14px;
+color: #818488;
+text-align: center;"
+                  >
+                    @imekenye
+                  </p>
+                </div>
+                <div
+                  class="profile-cardstats d-flex justify-content-between mx-4 pb-2"
+                >
+                  <div class="posts mr-2" style="line-height: 1.1;">
+                    995<br /><span style="font-size:10px; opacity:.5"
+                      >POSTS</span
+                    >
+                  </div>
+                  <div class="followers" style="line-height: 1.1;">
+                    373k<br /><span style="font-size:10px; opacity:.5"
+                      >FOLLOWERS</span
+                    >
+                  </div>
+                  <div class="following ml-2" style="line-height: 1.1;">
+                    299<br /><span style="font-size:10px; opacity:.5"
+                      >FOLLOWING</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- CARD 02 LEFT -->
+
+            <div class="card2 d-flex flex-column justify-content-center p-0">
+              <div
+                class="suggestions text-center"
+                style="font-size:11px !important; opacity:.5;"
+              >
+                SUGGESTIONS FOR YOU
+              </div>
+              <hr style="background-color:#0000; width:100%; height:2px;" />
+
+              <div
+                class="followfriend d-flex align-items-center justify-content-between mx-4"
+              >
+                <div class="profileinfo d-flex align-items-center w-100">
+                  <img
+                    class="rounded-circle mr-2"
+                    alt=""
+                    src="http://lorempixel.com/30/30/people/2/"
+                  />
+                  <div class="profilename" style="line-height: 1;">
+                    <h5
+                      style="margin:0 !important;line-height: .5; font-family: OpenSans-Regular;
+font-size: 14px;
+color: #2C2C2C;"
+                    >
+                      Ham Chuwon
+                    </h5>
+                    <p
+                      style="margin:0 !important;font-family: OpenSans-Regular;
+font-size: 11px;
+color: #818488;"
+                    >
+                      hamchuwon
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="pt-1 pb-1"
+                  href=""
+                  style="width:78px;height:19px; color:white; font-family: OpenSans-Regular;
+                    border-radius:2px;
+font-size: 10px;
+color: #FFFFFF;
+letter-spacing: 0;
+text-align: center; text-align:center; background-image: linear-gradient(-135deg, #4E60D3 0%, #913BAF 18%, #D52D88 76%, #F26D4F 100%);"
+                  >Follow</a
+                >
+              </div>
+              <div
+                class="followfriend d-flex align-items-center justify-content-between mx-4"
+              >
+                <div class="profileinfo d-flex align-items-center w-100">
+                  <img
+                    class="rounded-circle mr-2"
+                    alt=""
+                    src="http://lorempixel.com/30/30/people/3/"
+                  />
+                  <div class="profilename" style="line-height: 1;">
+                    <h5
+                      style="margin:0 !important;line-height: .5; font-family: OpenSans-Regular;
+font-size: 14px;
+color: #2C2C2C;"
+                    >
+                      Ohta Kin
+                    </h5>
+                    <p
+                      style="margin:0 !important;font-family: OpenSans-Regular;
+font-size: 11px;
+color: #818488;"
+                    >
+                      ohtakin
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="pt-1 pb-1"
+                  href=""
+                  style="width:78px;height:19px; color:white; font-family: OpenSans-Regular;
+                    border-radius:2px;
+font-size: 10px;
+color: #FFFFFF;
+letter-spacing: 0;
+text-align: center; text-align:center; background-image: linear-gradient(-135deg, #4E60D3 0%, #913BAF 18%, #D52D88 76%, #F26D4F 100%);"
+                  >Follow</a
+                >
+              </div>
+              <div
+                class="followfriend d-flex align-items-center justify-content-between mx-4"
+              >
+                <div class="profileinfo d-flex align-items-center w-100">
+                  <img
+                    class="rounded-circle mr-2"
+                    alt=""
+                    src="http://lorempixel.com/30/30/people/4/"
+                  />
+                  <div class="profilename" style="line-height: 1;">
+                    <h5
+                      style="margin:0 !important;line-height: .5; font-family: OpenSans-Regular;
+font-size: 14px;
+color: #2C2C2C;"
+                    >
+                      Pol Soria
+                    </h5>
+                    <p
+                      style="margin:0 !important;font-family: OpenSans-Regular;
+font-size: 11px;
+color: #818488;"
+                    >
+                      polsoria
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="pt-1 pb-1"
+                  href=""
+                  style="width:78px;height:19px; color:white; font-family: OpenSans-Regular;
+                    border-radius:2px;
+font-size: 10px;
+color: #FFFFFF;
+letter-spacing: 0;
+text-align: center; text-align:center; background-image: linear-gradient(-135deg, #4E60D3 0%, #913BAF 18%, #D52D88 76%, #F26D4F 100%);"
+                  >Follow</a
+                >
+              </div>
+              <div
+                class="followfriend d-flex align-items-center justify-content-between mx-4"
+              >
+                <div class="profileinfo d-flex align-items-center w-100">
+                  <img
+                    class="rounded-circle mr-2"
+                    alt=""
+                    src="http://lorempixel.com/30/30/people/7/"
+                  />
+                  <div class="profilename" style="line-height: 1;">
+                    <h5
+                      style="margin:0 !important;line-height: .5; font-family: OpenSans-Regular;
+font-size: 14px;
+color: #2C2C2C;"
+                    >
+                      Ren Delan
+                    </h5>
+                    <p
+                      style="margin:0 !important;font-family: OpenSans-Regular;
+font-size: 11px;
+color: #818488;"
+                    >
+                      rendelan
+                    </p>
+                  </div>
+                </div>
+                <a
+                  class="pt-1 pb-1"
+                  href=""
+                  style="width:78px;height:19px; color:white; font-family: OpenSans-Regular;
+                    border-radius:2px;
+font-size: 10px;
+color: #FFFFFF;
+letter-spacing: 0;
+text-align: center; text-align:center; background-image: linear-gradient(-135deg, #4E60D3 0%, #913BAF 18%, #D52D88 76%, #F26D4F 100%);"
+                  >Follow</a
+                >
+              </div>
+              <hr style="background-color:#0000; width:100%; height:2px;" />
+              <div class="seeall text-center" style="line-height: .5">
+                <a href="" style="font-size:12px !important;opacity:.5;">
+                  SEE ALL</a
+                >
+              </div>
+            </div>
+
+            <div class="footer mr-1">
+              <div class="row d-flex justify-content-center mr-5">
+                <p style="font-size: 10px; opacity:.5;" class="mr-2 mb-0">
+                  ABOUT
+                </p>
+                <p style="font-size: 10px; opacity:.5;" class="mr-2 mb-0">
+                  SUPPORT
+                </p>
+                <p style="font-size: 10px; opacity:.5;" class="mr-2 mb-0">
+                  BLOG
+                </p>
+                <p style="font-size: 10px; opacity:.5;" class="mr-2 mb-0">
+                  API
+                </p>
+                <p style="font-size: 10px; opacity:.5;" class="mr-2 mb-0">
+                  PRESS
+                </p>
+                <p style="font-size: 10px; opacity:.5;" class="mr-2 mb-0">
+                  JOBS
+                </p>
+              </div>
+              <div class="row d-flex justify-content-center mr-4 mb-0">
+                <p style="font-size: 10px; opacity:.5;" class="mr-2 mb-0">
+                  PRIVACY
+                </p>
+                <p style="font-size: 10px; opacity:.5;" class="mr-2 mb-0">
+                  TERMS
+                </p>
+              </div>
+              <p
+                style="font-size: 10px; opacity:.5;"
+                class="mb-5 mr-5 text-center"
+              >
+                &copy;2019 INSTAGRAM
+              </p>
+            </div>
+          </div>
+            {% endif %}
+        {% if user.is_authenticated %}
+        <div class="col-md-8 col-sm-12 d-flex flex-wrap justify-content-between">
+            {% else %}
+          <div class="col-md-12 col-sm-12 d-flex flex-wrap justify-content-between">
+            {% endif %}
+            <div class="card3  p-0">
+              <div class="placeholder-img">
+                  <img src="{% static 'archblue.jpg'%}" class="card-img-top" />
+              </div>
+              <div class="card-body d-flex justify-content-center align-items-center w-100">
+                <div class="card-left w-100 d-flex">
+                  <img
+                    class="rounded-circle mr-2"
+                    alt=""
+                    src="http://lorempixel.com/30/30/people/9/"
+                    height="30"
+                  />
+                  <div class="txt-card">
+                    <p class="m-0" style="font-weight:700; line-height:.8">imekenye</p>
+                    <p class="m-0" style="font-size: 11px; opacity:.5;">8 hours ago</p>
+                  </div>
+                </div>
+                <div class="card-right d-flex align-items-center">
+                  <a href="" class="mr-2"><img src="{% static 'heart.svg' %}" /></a>
+                  <p style="line-height:.8;margin-bottom:0 !important;" class="mr-1">10</p>
+                  <a href="" class="mr-1"><img src="{% static 'comment.svg' %}" /></a>
+                  <p style="line-height:.8;margin-bottom:0 !important;" >4</p>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="card3  p-0">
+              <div class="placeholder-img">
+                  <img src="http://lorempixel.com/300/600/" class="card-img-top" />
+              </div>
+              <div class="card-body d-flex justify-content-center align-items-center w-100">
+                <div class="card-left w-100 d-flex">
+                  <img
+                    class="rounded-circle mr-2"
+                    alt=""
+                    src="http://lorempixel.com/30/30/people/9/"
+                    height="30"
+                  />
+                  <div class="txt-card">
+                    <p class="m-0" style="font-weight:700; line-height:.8">imekenye</p>
+                    <p class="m-0" style="font-size: 11px; opacity:.5;">8 hours ago</p>
+                  </div>
+                </div>
+                <div class="card-right d-flex align-items-center">
+                  <a href="" class="mr-2"><img src="{% static 'heart.svg' %}" /></a>
+                  <p style="line-height:.8;margin-bottom:0 !important;" class="mr-1">10</p>
+                  <a href="" class="mr-1"><img src="{% static 'comment.svg' %}" /></a>
+                  <p style="line-height:.8;margin-bottom:0 !important;" >4</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card3  p-0">
+              <div class="placeholder-img">
+                  <img src="http://lorempixel.com/200/300/" class="card-img-top" />
+              </div>
+              <div class="card-body d-flex justify-content-center align-items-center w-100">
+                <div class="card-left w-100 d-flex">
+                  <img
+                    class="rounded-circle mr-2"
+                    alt=""
+                    src="http://lorempixel.com/30/30/people/9/"
+                    height="30"
+                  />
+                  <div class="txt-card">
+                    <p class="m-0" style="font-weight:700; line-height:.8">imekenye</p>
+                    <p class="m-0" style="font-size: 11px; opacity:.5;">8 hours ago</p>
+                  </div>
+                </div>
+                <div class="card-right d-flex align-items-center">
+                  <a href="" class="mr-2"><img src="{% static 'heart.svg' %}" /></a>
+                  <p style="line-height:.8;margin-bottom:0 !important;" class="mr-1">10</p>
+                  <a href="" class="mr-1"><img src="{% static 'comment.svg' %}" /></a>
+                  <p style="line-height:.8;margin-bottom:0 !important;" >4</p>
+                </div>
+              </div>
+            </div>
+
+
+          <div class="card3  p-0">
+              <div class="placeholder-img">
+                  <img src="http://lorempixel.com/300/500/" class="card-img-top" />
+              </div>
+              <div class="card-body d-flex justify-content-center align-items-center w-100">
+                <div class="card-left w-100 d-flex">
+                  <img
+                    class="rounded-circle mr-2"
+                    alt=""
+                    src="http://lorempixel.com/30/30/people/9/"
+                    height="30"
+                  />
+                  <div class="txt-card">
+                    <p class="m-0" style="font-weight:700; line-height:.8">imekenye</p>
+                    <p class="m-0" style="font-size: 12px; opacity:.5;">8 hours ago</p>
+                  </div>
+                </div>
+                <div class="card-right d-flex align-items-center">
+                  <a href="" class="mr-2"><img src="{% static 'heart.svg' %}" /></a>
+                  <p style="line-height:.8;margin-bottom:0 !important;" class="mr-1">10</p>
+                  <a href="" class="mr-1"><img src="{% static 'comment.svg' %}" /></a>
+                  <p style="line-height:.8;margin-bottom:0 !important;" >4</p>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="card3  p-0">
+              <div class="placeholder-img">
+                  <img src="http://lorempixel.com/400/400/" class="card-img-top" />
+              </div>
+              <div class="card-body d-flex justify-content-center align-items-center w-100">
+                <div class="card-left w-100 d-flex">
+                  <img
+                    class="rounded-circle mr-2"
+                    alt=""
+                    src="http://lorempixel.com/30/30/people/9/"
+                    height="30"
+                  />
+                  <div class="txt-card">
+                    <p class="m-0" style="font-weight:700; line-height:.8">imekenye</p>
+                    <p class="m-0" style="font-size: 12px; opacity:.5;">8 hours ago</p>
+                  </div>
+                </div>
+                <div class="card-right d-flex align-items-center">
+                  <a href="" class="mr-2"><img src="{% static 'heart.svg' %}" /></a>
+                  <p style="line-height:.8;margin-bottom:0 !important;" class="mr-1">10</p>
+                  <a href="" class="mr-1"><img src="{% static 'comment.svg' %}" /></a>
+                  <p style="line-height:.8;margin-bottom:0 !important;" >4</p>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="card3  p-0">
+              <div class="placeholder-img">
+                  <img src="http://lorempixel.com/300/300/" class="card-img-top" />
+              </div>
+              <div class="card-body d-flex justify-content-center align-items-center w-100">
+                <div class="card-left w-100 d-flex">
+                  <img
+                    class="rounded-circle mr-2"
+                    alt=""
+                    src="http://lorempixel.com/30/30/people/9/"
+                    height="30"
+                  />
+                  <div class="txt-card">
+                    <p class="m-0" style="font-weight:700; line-height:.8">imekenye</p>
+                    <p class="m-0" style="font-size: 12px; opacity:.5;">8 hours ago</p>
+                  </div>
+                </div>
+                <div class="card-right d-flex align-items-center">
+                  <a href="" class="mr-2"><img src="{% static 'heart.svg' %}" /></a>
+                  <p style="line-height:.8;margin-bottom:0 !important;" class="mr-1">10</p>
+                  <a href="" class="mr-1"><img src="{% static 'comment.svg' %}" /></a>
+                  <p style="line-height:.8;margin-bottom:0 !important;" >4</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
