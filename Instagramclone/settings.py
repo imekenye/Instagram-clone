@@ -15,7 +15,7 @@ import django_heroku
 import dj_database_url
 from decouple import config, Csv
 
-MODE = config('MODE', default='prod')
+MODE = config('MODE', default='dev')
 SECRET_KEY = config('SECRET_KEY')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
