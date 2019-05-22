@@ -1,0 +1,10 @@
+{% load static %}
+{{ image.image_name }}
+{{ image.image_caption }}
+
+<img src="{{ image.post_image.url }}" alt="" class="img-fluid">
+<a href="" class="mr-2"><img src="{% static 'heart.svg' %}" />{{ image.likes }}</a>
+<form method="POST" action="{% url 'upvote' image.id %}">
+    {% csrf_token %}
+    <input type="hidden">
+</form>
