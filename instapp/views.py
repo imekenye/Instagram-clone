@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Image
 from django.utils import timezone
@@ -24,8 +24,17 @@ def post(request):
             image.pub_date = timezone.datetime.now()
             image.user_profile = request.user
             image.save()
-            return redirect('home')
+            return redirect('/instapp/' + str(image.id))
         else:
             return render(request, 'instapp/post.html', {'error': 'All fields are required'})
     else:
         return render(request, 'instapp/post.html')
+
+
+def imagedetail(request, image_id):
+    image = get_object_or_404(Image, pk=image_id)
+    return render(request, 'instapp/imagedetail.html', {'image': image})
+
+
+def like(request, image_id):
+    return render(request, 'instapp/imagedetail.html')
