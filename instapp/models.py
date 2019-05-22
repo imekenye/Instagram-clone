@@ -13,5 +13,8 @@ class Image(models.Model):
     likes = models.IntegerField(default=0)
     comments = models.TextField()
 
+    def __str__(self):
+        return self.image_name
+
     def pub_date_format(self):
         return self.pub_date.strftime('%b %e %Y')
