@@ -45,7 +45,7 @@ Django 2
 
 or just use this
 
-`$ git clone https://github.com/watibini/instagram.git`
+`$ git clone https://github.com/imekenye/instagram-clone.git`
 
 4. Run this command to open the app
 
