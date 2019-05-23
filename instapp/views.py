@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from .models import Image
+from .models import Image,UserProfile
 from django.utils import timezone
 
 
@@ -10,7 +10,13 @@ from django.utils import timezone
 #     return render(request, 'instapp/home.html')
 
 def home(request):
-    return render(request, 'instapp/home.html')
+    images = Image.objects.all()
+    return render(request, 'instapp/home.html', {'images': images})
+
+
+# def home(request, image_id):
+#     images = get_object_or_404(Image, image_id)
+#     return render(request, 'instapp/home.html', {'images': images})
 
 
 @login_required
@@ -37,4 +43,8 @@ def imagedetail(request, image_id):
 
 
 def like(request, image_id):
-    return render(request, 'instapp/imagedetail.html')
+    if request.method == 'POST':
+        image = get_object_or_404(Image, pk=image_id)
+        image.likes += 1
+        image.save()
+        return redirect('/instapp/' + str(image.id))

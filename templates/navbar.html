@@ -10,7 +10,7 @@
           </div>
           <div class="nav-right">
               {% if user.is_authenticated %}
-            <a class="newpost mr-5">+ NEW POST</a>
+            <a class="newpost mr-5" href="{% url 'post' %}">+ NEW POST</a>
             <img src="{% static 'main-menu.svg' %}" alt="" class="mr-5" />
             <img src="" alt="" />
             <a href="#" class="avatar">

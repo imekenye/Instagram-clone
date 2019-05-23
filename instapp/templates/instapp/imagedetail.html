@@ -1,10 +1,11 @@
 {% load static %}
-{{ image.image_name }}
+
 {{ image.image_caption }}
 
-<img src="{{ image.post_image.url }}" alt="" class="img-fluid">
-<a href="" class="mr-2"><img src="{% static 'heart.svg' %}" />{{ image.likes }}</a>
-<form method="POST" action="{% url 'upvote' image.id %}">
-    {% csrf_token %}
-    <input type="hidden">
-</form>
+<img src="{{ image.post_image.url }}" alt="img" class="img-fluid">
+<a href="javascript:{document.getElementById('like').submit()}" class="btn btn-primary"><img
+        src="{% static 'heart.svg' %}"/> {{ image.likes }} </a>
+{#<form id="like" method="POST" action="{% url 'like' image.id %}">#}
+{#    {% csrf_token %}#}
+{##}
+{#</form>#}
