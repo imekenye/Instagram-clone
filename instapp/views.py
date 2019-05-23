@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from .models import Image,UserProfile
 from django.utils import timezone
+from .forms import *
+from .models import Image, UserProfile
 
 
 # Create your views here.
@@ -11,12 +12,12 @@ from django.utils import timezone
 
 def home(request):
     images = Image.objects.all()
+    # profile = UserProfile.objects.get(user_id=request.user)
     return render(request, 'instapp/home.html', {'images': images})
 
 
-# def home(request, image_id):
-#     images = get_object_or_404(Image, image_id)
-#     return render(request, 'instapp/home.html', {'images': images})
+def profile_index(request):
+    return render(request, 'instapp/profile.html')
 
 
 @login_required
@@ -48,3 +49,17 @@ def like(request, image_id):
         image.likes += 1
         image.save()
         return redirect('/instapp/' + str(image.id))
+#
+# def profile_index(request):
+#     if request.method == 'POST':
+#         form = UploadForm(request.POST,request.FILES)
+#
+#         if form.is_valid():
+#             form.save()
+#             return redirect('profile')
+#     else:
+#         form =UploadForm()
+#
+#         images = Image.objects.all()
+#         all_profile = UserProfile.objects.all()
+#     return render(request,'instapp/profile.html', locals())

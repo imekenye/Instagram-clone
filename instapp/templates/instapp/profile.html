@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Instaclone</title>
+  </head>
+  <body class="feed" style="background-color: #F1F5F8">
+    {% include 'navbar.html' %}
+    <div
+      class="container-fluid cont-prof"
+      style="margin-top:4%; background:white; height:40vh; padding:1%;"
+    >
+      <div class="row d-flex justify-content-center  text-center">
+        <div class="profile-details d-flex align-items-center h-100">
+          <div class="avatar mr-4">
+            <img
+              class="rounded-circle"
+              alt=""
+              src="http://lorempixel.com/100/100/people/9/"
+            />
+          </div>
+          <div class="info" style="width:300px !important;">
+            <div class="title d-flex">
+              <div class="text mr-2">
+                <h2
+                  style="font-family: OpenSans-Regular;
+font-size: 20px;
+color: #231F20;
+text-align: left; margin-bottom:0;"
+                >
+                  Isaiah Mekenye
+                </h2>
+                <p
+                  style="opacity: 0.7;
+font-family: OpenSans-Regular;
+font-size: 14px;
+color: #818488;
+text-align: left;"
+                >
+                  @imekenye
+                </p>
+              </div>
+              <div class="setting">
+                <img src="{% static 'settings.svg' %}" />
+              </div>
+            </div>
+            <div class="bio">
+              <p style="text-align:left; opacity:.5; font-size:12px;">
+                Ever heard of the Fuller Brush Man? You know, those legendary
+                guys who came knocking on the front doors of America, selling
+                brushes, mops and
+              </p>
+            </div>
+
+            <div
+              class="profile-cardstats d-flex justify-content-between  pb-2"
+              style="text-align:left !important;"
+            >
+              <div class="posts mr-2" style="line-height: 1.1;">
+                995<br /><span style="font-size:10px; opacity:.5">POSTS</span>
+              </div>
+              <div class="followers" style="line-height: 1.1;">
+                373k<br /><span style="font-size:10px; opacity:.5"
+                  >FOLLOWERS</span
+                >
+              </div>
+              <div class="following ml-2" style="line-height: 1.1;">
+                299<br /><span style="font-size:10px; opacity:.5"
+                  >FOLLOWING</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="profile-gallery container mt-3">
+      <div class="profilegall d-flex flex-wrap justify-content-between">
+          <div class="profimg mb-3">
+            <a href=""><img src="http://lorempixel.com/300/300/" />img</a>
+          </div>
+          <div class="profimg mb-3">
+            <a href=""><img src="http://lorempixel.com/400/400/" />img</a>
+          </div>
+          <div class="profimg mb-3">
+            <a href=""><img src="http://lorempixel.com/700/700/" />img</a>
+          </div>
+          <div class="profimg mb-3">
+            <a href=""><img src="http://lorempixel.com/1200/1200/" />img</a>
+          </div>
+          <div class="profimg mb-3">
+            <a href=""><img src="http://lorempixel.com/500/500/" />img</a>
+          </div>
+          <div class="profimg mb-3">
+            <a href=""><img src="http://lorempixel.com/900/900/" />img</a>
+          </div>
+          <div class="profimg mb-3">
+            <a href=""><img src="http://lorempixel.com/1000/1000/" />img</a>
+          </div>
+          <div class="profimg mb-3">
+            <a href=""><img src="http://lorempixel.com/800/800/" />img</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

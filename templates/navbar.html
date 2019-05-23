@@ -13,11 +13,11 @@
             <a class="newpost mr-5" href="{% url 'post' %}">+ NEW POST</a>
             <img src="{% static 'main-menu.svg' %}" alt="" class="mr-5" />
             <img src="" alt="" />
-            <a href="#" class="avatar">
+            <a href="{% url 'profile' %}" class="avatar">
               <img
                 class="rounded-circle"
                 alt=""
-                src="http://lorempixel.com/30/30/people/9/"
+                src="http://lorempixel.com/30/30/people/9/" width="30" height="30"
               />
             </a>   <a class="ml-3" href="javascript:{document.getElementById('logout').submit()}" onclick="">Log Out</a>
                   <form id="logout" method="POST" action="{% url 'logout' %}">

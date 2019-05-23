@@ -23,6 +23,8 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.TextField(max_length=255)
     prof_image = models.ImageField(upload_to='images/')
+    first_name = models.CharField(max_length=30, blank=True)
+    last_name = models.CharField(max_length=30, blank=True)
 
     def __str__(self):
         return f'{self.user.username} Profile'

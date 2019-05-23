@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <form method='post' action='{% url 'profile'%}'>
+      {% csrf_token %}
+      {{ form }}
+      <input type="hidden" id="im" name="user_id" value="{{user.id}}">
+      <input type="submit" name='Submit' value="Submit">
+    </form>
+  </body>
+
+</body>
+</html>
